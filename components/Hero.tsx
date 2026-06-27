@@ -1,10 +1,12 @@
 import Image from "next/image";
-import globeImg from "@/public/assets/globe_cropped.png"; 
-import { ArrowRight, MoveRight, LayoutDashboard, Waypoints, Presentation} from "lucide-react";
+import globeImg from "@/public/assets/hero.svg"; 
+import { ArrowRight, MoveRight, } from "lucide-react";
+import HeroButtons from "@/components/HeroButtons.tsx";
 
 export default function Hero() {
   return (
-    <section className="bg-[url('@/public/assets/hero.svg')] bg-[length:auto_160%] bg-center bg-no-repeat h-screen flex flex-col overflow-hidden px-8 py-8">
+    <section>
+    <div className="hidden md:flex bg-[url('@/public/assets/hero.svg')] bg-[length:auto_160%] bg-center bg-no-repeat h-screen flex-col overflow-hidden px-8 py-8">
       <div className="absolute inset-0 bg-gradient-to-r from-black/80 via-black/30 to-transparent z-0" />
       <div className="absolute inset-0 bg-gradient-to-l from-black/60 via-transparent to-transparent z-0" />
 
@@ -51,31 +53,41 @@ export default function Hero() {
           observe the predicted regional climate response.
         </p>
       </div>
-
-      <div className="mb-8 border-l-2 border-secondary-bg font-body self-end flex flex-col gap-1 animate-[fadeIn_2.5s_ease_both] pl-4">
-
-        <button className="w-full px-5 py-2.5 bg-secondary-accent text-primary-bg rounded-sm inline-flex items-center gap-3 cursor-pointer group transition-all duration-300 hover:bg-secondary-bg hover:text-primary-text ">
-          <LayoutDashboard className="w-4 shrink-0 group-hover:rotate-90 transition-all duration-400" />
-          <p className="text-sm font-medium tracking-wide">Go To Dashboard</p>
-        </button>
-
-        <button className="w-full px-5 py-2.5 border border-muted-text text-secondary-text hover:text-secondary-bg rounded-md inline-flex items-center gap-3 cursor-pointer group transition-all duration-300 hover:bg-secondary-text">
-          <Waypoints className="w-4 shrink-0 group-hover:rotate-90 transition-all duration-400" />
-          <p className="text-sm font-normal tracking-wide">See Presentation</p>
-        </button>
-
-        <button className="w-full px-5 py-2.5 text-muted-text rounded-full inline-flex items-center gap-3 cursor-pointer group transition-all duration-300 hover:text-secondary-accent">
-          <Presentation className="w-4 shrink-0 transition-transform duration-300 group-hover:rotate-12" />
-          <p className="text-sm font-normal tracking-wide">Our Approach</p>
-        </button>
-
-      </div>      
+      <HeroButtons/>
+           
       </div>
 
       <p className="absolute bottom-8 left-1/2 -translate-x-1/2 font-(family-name:--font-mono) text-[9px] tracking-[0.14em] uppercase text-[#B0BFCA] whitespace-nowrap animate-[fadeIn_2s_ease_both] max-sm:hidden">
         Pilot Region · Delhi NCR &nbsp;·&nbsp; IMD + INSAT-3R &nbsp;·&nbsp; ConvLSTM
       </p>
 
+      </div>
+
+
+
+        <div className="md:hidden flex flex-col justify-around items-center gap-6 px-6 py-4 bg-primary-bg text-center">
+        <div>
+          <p className="font-mono text-[10px] tracking-[0.2em] uppercase text-primary-accent">
+            ISRO  BAH 2026  PS-5
+          </p>
+
+          <h1 className="font-display text-primary-text text-3xl font-bold tracking-wide leading-tight">
+            India&apos;s Digital <span className="text-secondary-accent">Twin</span>
+          </h1>
+        </div>
+        <div className="justify-between ">
+          <p className="text-sm text-muted-text font-light leading-relaxed max-w-[320px]">
+            AI-powered climate simulation built on IMD gridded data, INSAT-3R satellite
+            products, and ConvLSTM deep learning.
+          </p>
+
+          <HeroButtons className=""/>
+        </div>
+        <p className="font-mono text-[9px] tracking-[0.14em] uppercase text-muted-text/50">
+          Pilot Region · Delhi NCR
+        </p>
+
+      </div>
     </section>
   );
 }

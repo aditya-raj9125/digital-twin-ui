@@ -48,7 +48,7 @@ export default function TechStack() {
       <div className="mb-14">
         <p className="font-mono text-xs tracking-[0.2em] uppercase text-primary-accent mb-4">
         </p>
-        <h2 className="font-display text-5xl font-bold tracking-wide leading-tight">
+        <h2 className="font-display text-3xl md:text-4xl lg:text-5xl font-bold tracking-wide leading-tight">
           Tech <span className="text-secondary-accent">Stack</span>
         </h2>
       </div>

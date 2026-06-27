@@ -4,7 +4,7 @@ export default function WhatWeBuilt() {
 
       <div className="mx-auto text-center mb-24">
     
-        <h2 className="font-display text-5xl font-bold tracking-wide leading-tight mb-5">
+        <h2 className="font-display text-3xl md:text-4xl lg:text-5xl font-bold tracking-wide leading-tight mb-5">
           What We <span className="text-secondary-accent">Built</span>
         </h2>
         <p className="text-sm leading-relaxed text-muted-text font-light mx-auto">
@@ -21,7 +21,7 @@ export default function WhatWeBuilt() {
           <span className="font-mono text-xs tracking-[0.2em] uppercase text-primary-accent inline-flex items-center gap-2 before:content-[''] before:w-4 before:h-px before:bg-primary-accent">
             Interactive Dashboard
           </span>
-          <h3 className="font-display text-3xl font-bold tracking-wide leading-snug">
+          <h3 className="font-display text-xl md:text-3xl font-bold tracking-wide leading-snug">
             Explore Climate at Every Grid Point
           </h3>
           <p className="text-sm leading-loose text-muted-text font-light">
@@ -30,6 +30,12 @@ export default function WhatWeBuilt() {
             and temperature fields evolve day by day. Sliders let you adjust input parameters and instantly see
             the model&apos;s predicted climate response across the pilot region.
           </p>
+          <div className="md:hidden relative rounded-md overflow-hidden border border-secondary-bg aspect-video bg-secondary-bg flex items-center justify-center shadow-[0_8px_48px_rgba(0,0,0,0.5),0_0_0_1px_rgba(42,127,175,0.1)] before:absolute before:inset-0 before:bg-gradient-to-br before:from-primary-accent/5 before:to-transparent after:absolute after:top-0 after:left-0 after:w-8 after:h-8 after:border-t-2 after:border-l-2 after:border-primary-accent after:rounded-tl-md">
+            <p className="font-mono text-xs tracking-[0.15em] uppercase text-primary-accent/40">
+              Dashboard Screenshot
+            </p>
+          </div>
+
           <div className="flex flex-wrap gap-2 mt-2">
             {["Delhi NCR Pilot", "0.25° Resolution", "What-If Scenarios", "Time Scrubber"].map((tag) => (
               <span key={tag} className="font-mono text-[9px] tracking-[0.1em] uppercase text-secondary-accent border border-primary-accent/25 rounded-sm px-2 py-0.5 bg-primary-accent/5">
@@ -39,7 +45,7 @@ export default function WhatWeBuilt() {
           </div>
         </div>
 
-        <div className="relative rounded-md overflow-hidden border border-secondary-bg aspect-video bg-secondary-bg flex items-center justify-center shadow-[0_8px_48px_rgba(0,0,0,0.5),0_0_0_1px_rgba(42,127,175,0.1)] before:absolute before:inset-0 before:bg-gradient-to-br before:from-primary-accent/5 before:to-transparent after:absolute after:top-0 after:left-0 after:w-8 after:h-8 after:border-t-2 after:border-l-2 after:border-primary-accent after:rounded-tl-md">
+        <div className="hidden md:block relative rounded-md overflow-hidden border border-secondary-bg aspect-video bg-secondary-bg flex items-center justify-center shadow-[0_8px_48px_rgba(0,0,0,0.5),0_0_0_1px_rgba(42,127,175,0.1)] before:absolute before:inset-0 before:bg-gradient-to-br before:from-primary-accent/5 before:to-transparent after:absolute after:top-0 after:left-0 after:w-8 after:h-8 after:border-t-2 after:border-l-2 after:border-primary-accent after:rounded-tl-md">
           <p className="font-mono text-xs tracking-[0.15em] uppercase text-primary-accent/40">
             Dashboard Screenshot
           </p>
@@ -48,7 +54,7 @@ export default function WhatWeBuilt() {
 
       <div className="grid grid-cols-2 gap-12 items-center max-sm:grid-cols-1">
 
-        <div className="relative rounded-md overflow-hidden border border-secondary-bg aspect-video bg-secondary-bg flex items-center justify-center shadow-[0_8px_48px_rgba(0,0,0,0.5),0_0_0_1px_rgba(42,127,175,0.1)] before:absolute before:inset-0 before:bg-gradient-to-br before:from-primary-accent/5 before:to-transparent after:absolute after:top-0 after:left-0 after:w-8 after:h-8 after:border-t-2 after:border-l-2 after:border-primary-accent after:rounded-tl-md max-sm:order-first">
+        <div className="hidden md:flex relative rounded-md overflow-hidden border border-secondary-bg aspect-video bg-secondary-bg items-center justify-center shadow-[0_8px_48px_rgba(0,0,0,0.5),0_0_0_1px_rgba(42,127,175,0.1)] before:absolute before:inset-0 before:bg-gradient-to-br before:from-primary-accent/5 before:to-transparent after:absolute after:top-0 after:left-0 after:w-8 after:h-8 after:border-t-2 after:border-l-2 after:border-primary-accent after:rounded-tl-md max-sm:order-first">
           <p className="font-mono text-xs tracking-[0.15em] uppercase text-primary-accent/40">
             Model Architecture / Pipeline
           </p>
@@ -58,7 +64,7 @@ export default function WhatWeBuilt() {
           <span className="font-mono text-xs tracking-[0.2em] uppercase text-primary-accent inline-flex items-center gap-2 before:content-[''] before:w-4 before:h-px before:bg-primary-accent">
             ML Pipeline
           </span>
-          <h3 className="font-display text-3xl font-bold tracking-wide leading-snug">
+          <h3 className="font-display text-xl md:text-3xl font-bold tracking-wide leading-snug">
             ConvLSTM — Seeing the Atmosphere in Space and Time
           </h3>
           <p className="text-sm leading-loose text-muted-text font-light">
@@ -67,6 +73,12 @@ export default function WhatWeBuilt() {
             fields and predicts next-day rainfall and temperature — preserving both the temporal patterns of weather
             systems and the spatial structure of the Indian subcontinent.
           </p>
+          <div className="md:hidden relative rounded-md overflow-hidden border border-secondary-bg aspect-video bg-secondary-bg flex md:hidden  items-center justify-center shadow-[0_8px_48px_rgba(0,0,0,0.5),0_0_0_1px_rgba(42,127,175,0.1)] before:absolute before:inset-0 before:bg-gradient-to-br before:from-primary-accent/5 before:to-transparent after:absolute after:top-0 after:left-0 after:w-8 after:h-8 after:border-t-2 after:border-l-2 after:border-primary-accent after:rounded-tl-md max-sm:order-first">
+            <p className="font-mono text-xs tracking-[0.15em] uppercase text-primary-accent/40">
+              Model Architecture / Pipeline
+            </p>
+          </div>
+
           <div className="flex flex-wrap gap-2 mt-2">
             {["ConvLSTM", "IMD + INSAT-3R", "7-Day Input Window", "Next-Day Forecast"].map((tag) => (
               <span key={tag} className="font-mono text-[9px] tracking-[0.1em] uppercase text-secondary-accent border border-primary-accent/25 rounded-sm px-2 py-0.5 bg-primary-accent/5">

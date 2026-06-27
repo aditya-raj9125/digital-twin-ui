@@ -1,5 +1,5 @@
 import type { Metadata } from "next";
-import { Playfair_Display, Barlow_Condensed, DM_Sans, JetBrains_Mono } from "next/font/google";
+import { Playfair_Display, Fraunces, Space_Grotesk,  Barlow_Condensed, DM_Sans, JetBrains_Mono } from "next/font/google";
 import "./globals.css";
 
 const playfairDisplay = Playfair_Display({
@@ -12,6 +12,16 @@ const playfairDisplay = Playfair_Display({
 const barlowCondensed = Barlow_Condensed({
   subsets: ["latin"],
   weight: ["600", "700", "800"],
+  variable: "--font-display",
+});
+const fraunces  = Fraunces({
+  subsets: ["latin"],
+  weight: ["600", "700", "800"],
+  variable: "--font-display",
+});
+const spaceGrotesk  = Space_Grotesk({
+  subsets: ["latin"],
+  weight: ["600", "700", ],
   variable: "--font-display",
 });
 
@@ -36,7 +46,7 @@ export const metadata: Metadata = {
 export default function RootLayout({ children }: { children: React.ReactNode }) {
   return (
     <html lang="en">
-      <body className={`${playfairDisplay.variable} ${dmSans.variable} ${jetbrainsMono.variable}`}>
+      <body className={`${spaceGrotesk.variable} ${dmSans.variable} ${jetbrainsMono.variable}`}>
         {children}
       </body>
     </html>

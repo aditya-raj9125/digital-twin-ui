@@ -6,7 +6,7 @@ export default function Datasets() {
         <p className="font-mono text-xs tracking-[0.2em] uppercase text-primary-accent mb-4">
           Data Infrastructure
         </p>
-        <h2 className="font-display text-5xl font-bold tracking-wide leading-tight mb-3">
+        <h2 className="font-display text-3xl md:text-4xl font-bold tracking-wide leading-tight mb-3">
           Datasets &amp; <span className="text-secondary-accent">Sources</span>
         </h2>
         <p className="text-sm leading-relaxed text-muted-text font-light">
@@ -25,7 +25,7 @@ export default function Datasets() {
               <span className="font-mono text-[9px] tracking-[0.15em] uppercase text-secondary-accent border border-secondary-accent/40 bg-secondary-accent/10 px-2 py-0.5 rounded-sm">
                 Primary
               </span>
-              <span className="font-display text-xl font-bold tracking-wide">IMD Gridded Data</span>
+              <span className="font-display text-lg md:text-xl font-bold tracking-wide">IMD Gridded Data</span>
             </div>
             <div className="font-mono text-[9px] tracking-[0.1em] text-muted-text text-right leading-loose max-sm:text-left">
               imdpune.gov.in · via imdlib<br />
@@ -91,7 +91,7 @@ export default function Datasets() {
               <span className="font-mono text-[9px] tracking-[0.15em] uppercase text-muted-text border border-muted-text/40 bg-muted-text/10 px-2 py-0.5 rounded-sm">
                 Secondary
               </span>
-              <span className="font-display text-xl font-bold tracking-wide">INSAT-3R / MOSDAC</span>
+              <span className="font-display text-lg md:text-xl font-bold tracking-wide">INSAT-3R / MOSDAC</span>
               <span className="font-mono text-[9px] tracking-[0.15em] uppercase text-amber-400 border border-amber-400/40 bg-amber-400/10 px-2 py-0.5 rounded-sm">
                 Pending
               </span>

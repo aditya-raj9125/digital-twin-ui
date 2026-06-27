@@ -15,10 +15,10 @@ export default function Footer() {
   return (
     <footer className="border-t-2 border-primary-accent bg-[#0A1520] border-t border-primary-accent/15 font-body text-primary-text">
 
-      <div className="px-20 py-16 grid grid-cols-3 gap-12 items-start max-sm:grid-cols-1 divide-x divide-x-2 divide-primary-accent/30 max-sm:px-6 max-sm:py-10 max-sm:gap-8">
+      <div className="px-20 py-16 grid grid-cols-3 gap-4 md:gap-12 items-start max-sm:grid-cols-2 md:divide-x md:divide-x-2 divide-primary-accent/30 max-sm:px-6 max-sm:py-10 max-sm:gap-8">
 
-        <div>
-          <p className="font-display text-2xl font-bold tracking-wide leading-tight mb-2">
+        <div className="col-span-2 md:col-span-1">
+          <p className="font-display text-xl md:text-2xl font-bold tracking-wide leading-tight mb-2">
             India&apos;s <span className="text-secondary-accent">Digital Twin</span>
           </p>
           <p className="text-xs text-muted-text font-light leading-relaxed max-w-[260px] mb-5">
@@ -34,7 +34,7 @@ export default function Footer() {
           <p className="font-mono text-xs tracking-[0.2em] uppercase text-primary-accent mb-4">
             Team
           </p>
-          <p className="font-display text-lg font-bold tracking-widest text-secondary-accent mb-3">
+          <p className="font-mono text-sm md:text-md md:text-lg font-bold tracking-widest text-secondary-accent mb-3">
             Pull_Request Pending
           </p>
           <div className="flex flex-col gap-2">
@@ -56,7 +56,7 @@ export default function Footer() {
               <a
                 key={label}
                 href={href}
-                className="inline-flex items-center gap-2.5 text-sm text-muted-text hover:text-secondary-accent transition-colors duration-200 w-fit group"
+                className="inline-flex items-center gap-2 text-xs md:text-sm text-muted-text hover:text-secondary-accent transition-colors duration-200 w-fit group"
               >
                 <span className="w-7 h-7 border border-primary-accent/25 rounded-full bg-primary-accent/5 flex items-center justify-center text-secondary-accent flex-shrink-0">
                   {icon}
@@ -71,7 +71,7 @@ export default function Footer() {
       </div>
 
       <div className="border-t border-primary-accent/10 px-20 py-4 flex items-center justify-between flex-wrap gap-3 max-sm:px-6">
-        <p className="font-mono text-[9px] tracking-[0.12em] uppercase text-primary-accent/50">
+        <p className="hidden md:block font-mono text-[9px] tracking-[0.12em] uppercase text-primary-accent/50">
           Built with{" "}
           {BUILT_WITH.map((tech, i) => (
             <span key={tech}>
