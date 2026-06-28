@@ -1,11 +1,11 @@
-import { MoveLeft } from "lucide-react";
+import { ChevronLeft, ArrowLeft } from "lucide-react";
 import Link from "next/link";
 
 export default function DashboardTopbar({ date }: { date: string }) {
   return (
     <div className="col-span-full bg-[#0D1B2A] border-b border-primary-accent/15 flex items-center justify-between px-5 z-10">
-      <Link href="/" className="w-6">
-        <MoveLeft className="w-5 text-priamry-text"/>
+      <Link href="/" className="w-6 text-white hover:text-primary-accent inline-flex gap-1 group">
+        <ChevronLeft className="group-hover:-translate-x-1"/>
       </Link>
       <div className="flex items-center gap-3">
         <span className="font-display text-sm font-semibold tracking-wide">

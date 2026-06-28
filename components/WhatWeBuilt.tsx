@@ -49,7 +49,7 @@ export default function WhatWeBuilt() {
 
         <div className="hidden md:block relative rounded-md overflow-hidden border border-secondary-bg aspect-video bg-secondary-bg flex items-center justify-center shadow-[0_8px_48px_rgba(0,0,0,0.5),0_0_0_1px_rgba(42,127,175,0.1)] before:absolute before:inset-0 before:bg-gradient-to-br before:from-primary-accent/5 before:to-transparent after:absolute after:top-0 after:left-0 after:w-8 after:h-8 after:border-t-2 after:border-l-2 after:border-primary-accent after:rounded-tl-md">
           <Image 
-            src="/assets/sample_rain.jpg" 
+            src="/assets/dashboard_ss.jpg" 
             fill
             alt="dashboard image"
           />
@@ -57,11 +57,12 @@ export default function WhatWeBuilt() {
       </div>
 
       <div className="grid grid-cols-2 gap-12 items-center max-sm:grid-cols-1">
-
-        <div className="hidden md:flex relative rounded-md overflow-hidden border border-secondary-bg aspect-video bg-secondary-bg items-center justify-center shadow-[0_8px_48px_rgba(0,0,0,0.5),0_0_0_1px_rgba(42,127,175,0.1)] before:absolute before:inset-0 before:bg-gradient-to-br before:from-primary-accent/5 before:to-transparent after:absolute after:top-0 after:left-0 after:w-8 after:h-8 after:border-t-2 after:border-l-2 after:border-primary-accent after:rounded-tl-md max-sm:order-first">
-          <p className="font-mono text-xs tracking-[0.15em] uppercase text-primary-accent/40">
-            Model Architecture / Pipeline
-          </p>
+        <div className="hidden md:block relative rounded-md overflow-hidden border border-secondary-bg aspect-video bg-secondary-bg flex items-center justify-center shadow-[0_8px_48px_rgba(0,0,0,0.5),0_0_0_1px_rgba(42,127,175,0.1)] before:absolute before:inset-0 before:bg-gradient-to-br before:from-primary-accent/5 before:to-transparent after:absolute after:top-0 after:left-0 after:w-8 after:h-8 after:border-t-2 after:border-l-2 after:border-primary-accent after:rounded-tl-md">
+          <Image 
+            src="/assets/sample_rain.jpg" 
+            fill
+            alt="dashboard image"
+          />
         </div>
 
         <div className="flex flex-col gap-4">
