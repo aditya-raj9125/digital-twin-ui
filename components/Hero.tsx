@@ -1,7 +1,7 @@
 import Image from "next/image";
 import globeImg from "@/public/assets/hero.svg"; 
 import { ArrowRight, MoveRight, } from "lucide-react";
-import HeroButtons from "@/components/HeroButtons.tsx";
+import HeroButtons from "@/components/HeroButtons";
 
 export default function Hero() {
   return (
@@ -48,7 +48,7 @@ export default function Hero() {
           products, and ConvLSTM deep learning — modelling and predicting India&apos;s
           atmospheric conditions at spatial resolution.
         </p>
-        <p className="animate-[fadeIn_2.5s_ease_both]">
+        <p className="text-medium shadow-md animate-[fadeIn_2.5s_ease_both]">
           A what-if scenario engine lets you adjust temperature or rainfall inputs and
           observe the predicted regional climate response.
         </p>
@@ -64,30 +64,36 @@ export default function Hero() {
       </div>
 
 
+      <div className="md:hidden relative flex flex-col justify-between items-center px-6 py-8 min-h-[90vh] text-center
+  bg-[url('@/public/assets/hero-mobile.png')] bg-cover bg-center bg-no-repeat">
+  
+  <div className="absolute inset-0 bg-gradient-to-b from-black/60 via-transparent to-black/70 z-0" />
+  
+  <div className="relative z-10 flex flex-col justify-between items-center min-h-screen py-12 gap-4">
+    
+    <div className="text-center">
+      <p className="font-mono text-[10px] tracking-[0.2em] uppercase text-secondary-accent mb-3">
+        ISRO  BAH 2026  PS-5
+      </p>
+      <h1 className="font-display text-4xl font-bold tracking-wide leading-tight text-primary-text">
+        India&apos;s Digital <span className="text-secondary-accent">Twin</span>
+      </h1>
+    </div>
 
-        <div className="md:hidden flex flex-col justify-around items-center gap-6 px-6 py-4 bg-primary-bg text-center">
-        <div>
-          <p className="font-mono text-[10px] tracking-[0.2em] uppercase text-primary-accent">
-            ISRO  BAH 2026  PS-5
-          </p>
+    <div className="flex-1" />
 
-          <h1 className="font-display text-primary-text text-3xl font-bold tracking-wide leading-tight">
-            India&apos;s Digital <span className="text-secondary-accent">Twin</span>
-          </h1>
-        </div>
-        <div className="justify-between ">
-          <p className="text-sm text-muted-text font-light leading-relaxed max-w-[320px]">
-            AI-powered climate simulation built on IMD gridded data, INSAT-3R satellite
-            products, and ConvLSTM deep learning.
-          </p>
+    <div className="flex flex-col items-center gap-4">
+      <p className="text-xs text-muted-text font-light leading-relaxed max-w-[280px]">
+        AI-powered climate simulation built on IMD data, INSAT-3R satellite products, and ConvLSTM deep learning.
+      </p>
+      <HeroButtons />
+      <p className="font-mono text-[9px] tracking-[0.14em] uppercase text-muted-text/50">
+        Pilot Region · Delhi NCR
+      </p>
+    </div>
 
-          <HeroButtons className=""/>
-        </div>
-        <p className="font-mono text-[9px] tracking-[0.14em] uppercase text-muted-text/50">
-          Pilot Region · Delhi NCR
-        </p>
-
-      </div>
+  </div>
+</div>
     </section>
   );
 }

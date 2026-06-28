@@ -1,3 +1,5 @@
+import Image from "next/image";
+
 export default function WhatWeBuilt() {
   return (
     <section className="bg-primary-bg px-20 py-28 font-body text-primary-text max-sm:px-6 max-sm:py-16">
@@ -46,9 +48,11 @@ export default function WhatWeBuilt() {
         </div>
 
         <div className="hidden md:block relative rounded-md overflow-hidden border border-secondary-bg aspect-video bg-secondary-bg flex items-center justify-center shadow-[0_8px_48px_rgba(0,0,0,0.5),0_0_0_1px_rgba(42,127,175,0.1)] before:absolute before:inset-0 before:bg-gradient-to-br before:from-primary-accent/5 before:to-transparent after:absolute after:top-0 after:left-0 after:w-8 after:h-8 after:border-t-2 after:border-l-2 after:border-primary-accent after:rounded-tl-md">
-          <p className="font-mono text-xs tracking-[0.15em] uppercase text-primary-accent/40">
-            Dashboard Screenshot
-          </p>
+          <Image 
+            src="/assets/sample_rain.jpg" 
+            fill
+            alt="dashboard image"
+          />
         </div>
       </div>
 

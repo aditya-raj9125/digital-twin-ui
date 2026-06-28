@@ -5,13 +5,13 @@
   --font-body:    'DM Sans', sans-serif;
   --font-mono:    'JetBrains Mono', monospace;
 
-  --color-primary-bg:       #0D1B2A;
-  --color-secondary-bg:     #1A2E42;
-  --color-primary-accent:   #2A7FAF;
+  --color-primary-bg: #0D1B2A;
+  --color-secondary-bg: #1A2E42;
+  --color-primary-accent: #2A7FAF;
   --color-secondary-accent: #4AADDB;
-  --color-primary-text:     #EFF6FB;
-  --color-secondary-text:   #DAEAF5;
-  --color-muted-text:       #7AAABB;
+  --color-primary-text: #EFF6FB;
+  --color-secondary-text: #DAEAF5;
+  --color-muted-text: #7AAABB;
 }
 
 html {

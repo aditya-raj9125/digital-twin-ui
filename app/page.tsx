@@ -1,5 +1,3 @@
-"use client";
-
 import Hero from "@/components/Hero";
 import WhatWeBuilt from "@/components/WhatWeBuilt";
 import Datasets from "@/components/Datasets";

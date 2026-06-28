@@ -38,9 +38,9 @@ const jetbrainsMono = JetBrains_Mono({
 });
 
 export const metadata: Metadata = {
-  title: "India's Digital Twin — BAH 2026",
+  title: "India's Digital Twin | BAH 2026",
   description:
-    "AI-powered digital twin of India's climate system. Built on IMD and INSAT data, piloted over Jharkhand. BAH-2026 Challenge 05.",
+    "AI-powered digital twin of India's climate system. Built on IMD and INSAT data, piloted over NCR. BAH-2026 Challenge 05.",
 };
 
 export default function RootLayout({ children }: { children: React.ReactNode }) {
