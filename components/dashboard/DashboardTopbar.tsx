@@ -3,9 +3,10 @@ import Link from "next/link";
 
 export default function DashboardTopbar({ date }: { date: string }) {
   return (
-    <div className="col-span-full bg-[#0D1B2A] border-b border-primary-accent/15 flex items-center justify-between px-5 z-10">
-      <Link href="/" className="w-6 text-white hover:text-primary-accent inline-flex gap-1 group">
-        <ChevronLeft className="group-hover:-translate-x-1"/>
+    <div className="py-2 col-span-full bg-[#0D1B2A] border-b border-primary-accent/15 flex items-center justify-between px-5 z-10">
+      <Link href="/" className="w-fit items-center text-sm text-white hover:text-secondary-text inline-flex gap-1 group">
+        <ChevronLeft className="opacity-0 group-hover:opacity-100 w-4 group-hover:-translate-x-1 transition-all duration-400"/>
+        <p className="group-hover:underline transition-all duration-300">Home</p>
       </Link>
       <div className="flex items-center gap-3">
         <span className="font-display text-sm font-semibold tracking-wide">

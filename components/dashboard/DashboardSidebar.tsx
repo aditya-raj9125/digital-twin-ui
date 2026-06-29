@@ -16,14 +16,30 @@ interface Props {
   tempDelta: number;
   setTempDelta: (v: number) => void;
 }
+function getRangeBackground(value: number, min: number, max: number) {
+  const center = (max + min) / 2; // 0 for -50 to 50
+  const centerPct = ((center - min) / (max - min)) * 100;
+  const valuePct  = ((value - min) / (max - min)) * 100;
 
+  const left  = Math.min(centerPct, valuePct);
+  const right = Math.max(centerPct, valuePct);
+
+  return `linear-gradient(to right,
+    #1E3448 0%,
+    #1E3448 ${left}%,
+    #4AADDB ${left}%,
+    #4AADDB ${right}%,
+    #1E3448 ${right}%,
+    #1E3448 100%
+  )`;
+}
 export default function DashboardSidebar({
   variable, setVariable,
   rainfallDelta, setRainfallDelta,
   tempDelta, setTempDelta,
 }: Props) {
   return (
-    <div className="h-full bg-[#0D1B2A] border-r border-primary-accent/15 flex flex-col gap-6 px-3 py-5 max-lg:items-center max-lg:px-2">
+    <div className="w-[200px] max-lg:w-12 h-full bg-[#0D1B2A] border-r border-primary-accent/15 flex flex-col gap-6 px-3 py-3 overflow-y-auto">
 
       <div className="w-full">
         <p className="font-mono text-[8px] tracking-[0.2em] uppercase text-primary-accent mb-2 max-lg:hidden">
@@ -47,14 +63,13 @@ export default function DashboardSidebar({
         </div>
       </div>
 
-      <div className="w-full h-px bg-primary-accent/10" />
+      <div className="w-full h-px bg-primary-accent/10 max-lg:hidden" />
 
       <div className="w-full max-lg:hidden">
         <p className="font-mono text-[8px] tracking-[0.2em] uppercase text-primary-accent mb-3">
           What-If Scenario
         </p>
-        <div className="flex flex-col gap-4">
-
+        <div className="flex flex-col gap-5">
           <div className="flex flex-col gap-1.5">
             <div className="flex justify-between items-center">
               <span className="text-xs text-secondary-text">Rainfall Δ</span>
@@ -65,10 +80,12 @@ export default function DashboardSidebar({
             <input
               type="range" min={-50} max={50} value={rainfallDelta}
               onChange={(e) => setRainfallDelta(Number(e.target.value))}
-              className="w-full h-[3px] appearance-none bg-[#1E3448] rounded-full outline-none cursor-pointer accent-secondary-accent"
+              style={{ background: getRangeBackground(rainfallDelta, -50, 50) }}
+              className="w-full accent-secondary-accent cursor-pointer"
+              onMouseEnter={(e) => e.currentTarget.classList.add("thumb-hover")}
+              onMouseLeave={(e) => e.currentTarget.classList.remove("thumb-hover")}
             />
           </div>
-
           <div className="flex flex-col gap-1.5">
             <div className="flex justify-between items-center">
               <span className="text-xs text-secondary-text">Temperature Δ</span>
@@ -79,10 +96,12 @@ export default function DashboardSidebar({
             <input
               type="range" min={-10} max={10} value={tempDelta}
               onChange={(e) => setTempDelta(Number(e.target.value))}
-              className="w-full h-[3px] appearance-none bg-[#1E3448] rounded-full outline-none cursor-pointer accent-secondary-accent"
+              style={{ background: getRangeBackground(tempDelta, -10, 10) }}
+              className="w-full accent-secondary-accent cursor-pointer"
+              onMouseEnter={(e) => e.currentTarget.classList.add("thumb-hover")}
+              onMouseLeave={(e) => e.currentTarget.classList.remove("thumb-hover")}
             />
           </div>
-
         </div>
       </div>
 
