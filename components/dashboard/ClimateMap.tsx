@@ -33,7 +33,7 @@ const SCALES: Record<Variable, { min: number; max: number; stops: string[] }> = 
   },
   tmin: {
     min: 15, max: 30,
-    stops: ["#EFF6FF", "#BFDBFE", "#60A5FA", "#2A7FAF", "#1E3A8A"],
+    stops: ["#F3E8FF","#D8B4FE","#A78BFA","#7C3AED","#4C1D95"],
   },
 };
 
@@ -78,8 +78,8 @@ function getColor(value: number, variable: Variable, mode: OverlayMode, actual?:
 function generateMockGrid(variable: Variable): GridPoint[] {
   const { min, max } = SCALES[variable];
   const points: GridPoint[] = [];
-  for (let lat = 28.0; lat <= 29.5; lat += 0.25) {
-    for (let lon = 76.5; lon <= 78.0; lon += 0.25) {
+  for (let lat = 8.0; lat <= 13.0; lat += 0.25) {
+    for (let lon = 74.5; lon <= 77.5; lon += 0.25) {
       const actual    = min + Math.random() * (max - min);
       const predicted = Math.max(min, Math.min(max, actual + (Math.random() - 0.5) * (max - min) * 0.2));
       points.push({ lat, lon, actual, predicted });
@@ -120,7 +120,7 @@ function GridLayer({ variable, mode, onPointSelect, onTooltip }: {
 
       const rect = L.rectangle(
         [[lat, lon], [lat + 0.25, lon + 0.25]],
-        { color: "transparent", fillColor: color, fillOpacity: 0.65, weight: 0 }
+        { color: "transparent", fillColor: color, fillOpacity: 0.3, weight: 0 }
       );
 
       rect.on("mouseover", (e: any) => {
@@ -143,7 +143,7 @@ function GridLayer({ variable, mode, onPointSelect, onTooltip }: {
       });
 
       rect.on("mouseout", () => {
-        rect.setStyle({ fillOpacity: 0.65 });
+        rect.setStyle({ fillOpacity: 0.4 });
         onTooltip(null);
       });
 
@@ -248,14 +248,14 @@ export default function ClimateMap({ variable, date, onPointSelect }: Props) {
       )}
 
       <MapContainer
-        center={[28.7041, 77.1025]}
-        zoom={7}
+        center={[12.0, 78.0]}
+        zoom={6}
         style={{ height: "100%", width: "100%", background: "#0D1B2A" }}
         zoomControl={true}
       >
         <TileLayer
           url="https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png"
-          attribution='&copy; <a href="https://stadiomaps.com/">stadio</a>'
+          attribution='&copy; <a href="https://openstreetmap.com/">openstreetmap</a>'
         />
         <GridLayer
           variable={variable}

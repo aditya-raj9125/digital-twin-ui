@@ -13,7 +13,7 @@ This project is a Proof-of-Concept AI-powered digital twin of India's climate, b
 
 The system combines a ConvLSTM deep learning model trained on historical climate data with an interactive map dashboard, allowing users to explore both real observed conditions and AI-generated predictions, including a "what-if" scenario engine to simulate the impact of changing rainfall or temperature inputs.
 
-**Pilot region:** Delhi NCR
+**Pilot region:** Kerala
 
 ### What it does
 

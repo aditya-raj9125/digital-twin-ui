@@ -41,7 +41,7 @@ export default function WhatWeBuilt() {
           </div>
 
           <div className="flex flex-wrap gap-2 mt-2">
-            {["Delhi NCR Pilot", "0.25° Resolution", "What-If Scenarios", "Time Scrubber"].map((tag) => (
+            {["Kerala Pilot", "0.25° Resolution", "What-If Scenarios", "Time Scrubber"].map((tag) => (
               <span key={tag} className="font-mono text-[9px] tracking-[0.1em] uppercase text-secondary-accent border border-primary-accent/25 rounded-sm px-2 py-0.5 bg-primary-accent/5">
                 {tag}
               </span>

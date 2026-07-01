@@ -5,7 +5,7 @@ import { Variable } from "@/app/dashboard/page";
 const VARIABLES: { key: Variable; label: string; color: string }[] = [
   { key: "rain",  label: "Rainfall",  color: "#4AADDB" },
   { key: "tmax",  label: "Max Temp",  color: "#F59E0B" },
-  { key: "tmin",  label: "Min Temp",  color: "#60A5FA" },
+  { key: "tmin",  label: "Min Temp",  color: "#4C1D95" },
 ];
 
 interface Props {

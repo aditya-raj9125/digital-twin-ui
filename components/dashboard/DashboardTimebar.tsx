@@ -1,7 +1,7 @@
 "use client";
 
-const START = new Date("2021-01-01").getTime();
-const END   = new Date("2022-12-31").getTime();
+const START = new Date("2012-01-01").getTime();
+const END   = new Date("2024-12-31").getTime();
 const RANGE = END - START;
 
 function dateToPercent(date: string) {
@@ -54,10 +54,10 @@ export default function DashboardTimebar({ date, setDate }: Props) {
           />
         </div>
         <div className="flex justify-between font-mono text-[8px] text-muted-text tracking-wide">
-          <span>Jan 2021</span>
-          <span>Jul 2021</span>
-          <span>Jan 2022</span>
-          <span>Dec 2022</span>
+          <span>Jan 2012</span>
+          <span>Jul 2016</span>
+          <span>Jan 2020</span>
+          <span>Dec 2024</span>
         </div>
       </div>
 
