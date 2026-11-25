@@ -1,0 +1,16 @@
+.git
+.next
+node_modules
+__pycache__
+*.pyc
+.env*
+.vercel
+Doc.md
+ISRO_BAH_2026/processed/stacked_tensor/train_tensor_2012_2024.npz
+ISRO_BAH_2026/processed/stacked_tensor/validation_2025.npz
+ISRO_BAH_2026/tensorboard_logs
+ISRO_BAH_2026/predictions
+ISRO_BAH_2026/checkpoints/latest_checkpoint.pt
+ISRO_BAH_2026/checkpoints/latest_model.pt
+ISRO_BAH_2026/checkpoints/optimizer.pt
+ISRO_BAH_2026/checkpoints/scheduler.pt
