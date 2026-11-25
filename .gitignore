@@ -39,3 +39,13 @@ yarn-error.log*
 # typescript
 *.tsbuildinfo
 next-env.d.ts
+
+# python
+__pycache__/
+*.py[cod]
+*.egg-info/
+.venv/
+
+# model checkpoints, datasets, and local progress docs
+ISRO_BAH_2026/
+Doc.md
