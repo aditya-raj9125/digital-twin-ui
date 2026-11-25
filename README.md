@@ -100,14 +100,14 @@ This repository is pre-configured for **Hugging Face Spaces (Docker SDK)** on po
 
 Because `ISRO_BAH_2026/` contains large binary checkpoints and `.npz` tensors, it is excluded from git via `.gitignore`. To deploy to Hugging Face Spaces:
 
-1. **Upload the model & dataset artifacts to a Hugging Face Model Repo** (e.g. `your-username/climate-digital-twin-kerala`) preserving the folder structure (`checkpoints/best_model.pt`, `normalization_stats.json`, `processed/stacked_tensor/*.npz`, `training_history/`, `plots/`):
+1. **Upload the model & dataset artifacts to a Hugging Face Model Repo** (e.g. `Adityahars/climate-digital-twin-kerala`) preserving the folder structure (`checkpoints/best_model.pt`, `normalization_stats.json`, `processed/stacked_tensor/*.npz`, `training_history/`, `plots/`):
    ```bash
-   huggingface-cli upload your-username/climate-digital-twin-kerala ./ISRO_BAH_2026 .
+   huggingface-cli upload Adityahars/climate-digital-twin-kerala ./ISRO_BAH_2026 .
    ```
-2. **Create a new Hugging Face Space** selecting **Docker** as the Space SDK, and push or connect this repository.
-3. **Set Space Variable**:
+2. **Create a new Hugging Face Space** at [huggingface.co/new-space](https://huggingface.co/new-space) under [Adityahars](https://huggingface.co/Adityahars) selecting **Docker** as the Space SDK, and push or connect this repository.
+3. **Set Space Variable** *(optional — defaults to `Adityahars/climate-digital-twin-kerala`)*:
    - In your Space **Settings → Variables and secrets**, add:
-     - `HF_MODEL_REPO` = `your-username/climate-digital-twin-kerala`
+     - `HF_MODEL_REPO` = `Adityahars/climate-digital-twin-kerala`
      - *(Optional, if private repo)* `HF_TOKEN` = your Hugging Face read token.
 4. The container will automatically download the artifacts on startup, launch `uvicorn` on `127.0.0.1:8000`, and serve the Next.js dashboard on port `7860`.
 

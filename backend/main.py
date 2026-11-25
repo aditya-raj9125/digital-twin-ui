@@ -48,7 +48,7 @@ def _ensure_artifacts() -> None:
     """Download model artifacts from Hugging Face Hub if missing locally and HF_MODEL_REPO is set."""
     if CHECKPOINT_PATH.exists() and TRAIN_NPZ_PATH.exists() and VAL_NPZ_PATH.exists():
         return
-    hf_repo = os.environ.get("HF_MODEL_REPO")
+    hf_repo = os.environ.get("HF_MODEL_REPO", "Adityahars/climate-digital-twin-kerala")
     if not hf_repo:
         raise FileNotFoundError(
             f"Missing model artifacts under {ISRO_DIR}. "
